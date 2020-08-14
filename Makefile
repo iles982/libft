@@ -41,9 +41,9 @@ HEADER = libft.h
 all: $(NAME)
 
 $(NAME): libft.h
-	gcc -Wall -Wextra -Werror -O3 -c $(SRC) -I $(HEADER)
-	ar rc $(NAME) $(OFILES)
-	ranlib $(NAME)
+	@clang -Wall -Wextra -Werror -c $(SRC) -I $(HEADER)
+	@ar rc $(NAME) $(OFILES)
+	@ranlib $(NAME)
 
 clean:
 	/bin/rm -f $(OFILES)
